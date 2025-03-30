@@ -18,25 +18,25 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 # PROGRAM
-from django.db import models                                                                                                                                                                                          
-from django.contrib import admin                                                                                                                                                                                      
-class footballplayer (models.Model):                                                                                                                                                                                
+    from django.db import models                                                                                                                                                                                          
+    from django.contrib import admin                                                                                                                                                                                      
+    class footballplayer (models.Model):                                                                                                                                                                                
     
-    name=models.CharField(max_length=20)                                                                                                                                                                              
-    weight=models.IntegerField()                                                                                                                                                                                      
-    players_id=models.CharField(max_length=100)                                                                                                                                                                       
-    age=models.IntegerField()                                                                                                                                                                                         
-    members=models.CharField(max_length=20)
+        name=models.CharField(max_length=20)                                                                                                                                                                              
+        weight=models.IntegerField()                                                                                                                                                                                      
+        players_id=models.CharField(max_length=100)                                                                                                                                                                       
+        age=models.IntegerField()                                                                                                                                                                                         
+        members=models.CharField(max_length=20)
 
-class footballplayerAdmin(admin.ModelAdmin):                                                                                                                                                                         
+    class footballplayerAdmin(admin.ModelAdmin):                                                                                                                                                                         
     
-    list_display=('name','players_id','weight','age','members')
+        list_display=('name','players_id','weight','age','members')
 
-admin.py
+    admin.py
 
-    from django.contrib import admin                                                                                                                                                                                         
-    from django.contrib import admin                                                                                                                                                                                                   
-    admin.site.register(footballplayer,footballplayerAdmin)
+        from django.contrib import admin                                                                                                                                                                                         
+        from django.contrib import admin                                                                                                                                                                                                   
+        admin.site.register(footballplayer,footballplayerAdmin)
 
 
 
